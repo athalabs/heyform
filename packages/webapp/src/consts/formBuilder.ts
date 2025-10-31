@@ -1,6 +1,6 @@
 export const GOOGLE_FONTS = [
   'Inter',
-  'Public Sans',
+  'Roboto Condensed',
   'Georgia',
   'Sniglet',
   'Raleway',
@@ -66,7 +66,7 @@ export const GOOGLE_FONTS_OPTIONS: IOptionType[] = [
 
 export const FORM_THEMES = [
   {
-    fontFamily: 'Public Sans',
+    fontFamily: 'Roboto Condensed',
     questionTextColor: '#000',
     answerTextColor: '#0445AF',
     buttonBackground: '#0445AF',
@@ -76,7 +76,7 @@ export const FORM_THEMES = [
     backgroundBrightness: 0
   },
   {
-    fontFamily: 'Public Sans',
+    fontFamily: 'Roboto Condensed',
     questionTextColor: '#3D3D3D',
     answerTextColor: '#4FB0AE',
     buttonBackground: '#4FB0AE',

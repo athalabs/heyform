@@ -2,7 +2,7 @@ import type { FormTheme } from '@heyform-inc/shared-types-enums'
 import { alpha, helper, hexToRgb, isDarkColor } from '@heyform-inc/utils'
 
 export const DEFAULT_THEME: FormTheme = {
-  fontFamily: 'Public Sans',
+  fontFamily: 'Roboto Condensed',
   questionTextColor: '#000',
   answerTextColor: '#0445AF',
   buttonBackground: '#0445AF',
@@ -11,7 +11,7 @@ export const DEFAULT_THEME: FormTheme = {
 }
 
 export const GOOGLE_FONTS = [
-  'Public Sans',
+  'Roboto Condensed',
   'Inter',
   'Montserrat',
   'Alegreya',
@@ -187,7 +187,7 @@ export function getThemeStyle(theme: FormTheme, query?: Record<string, any>): st
 }
 
 const DEFAULT_FONTS =
-  'Public Sans, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji'
+  'Roboto Condensed, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji'
 
 export function getStripeElementStyle(theme: FormTheme) {
   return {
