@@ -11,6 +11,10 @@ export const CAPTCHA_KIND_OPTIONS = [
 
 export const LOCALES_OPTIONS = [
   {
+    label: 'Ελληνικά',
+    value: 'el'
+  },
+  {
     label: 'English',
     value: 'en'
   },
