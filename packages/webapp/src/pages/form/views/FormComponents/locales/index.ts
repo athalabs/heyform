@@ -8,6 +8,7 @@ import tr from './tr'
 import zhCn from './zh-cn'
 import zhTw from './zh-tw'
 import cs from './cs'
+import el from './el'
 
 export default {
   en: {
@@ -39,5 +40,8 @@ export default {
   },
   cs: {
     translation: cs
+  },
+  el: {
+    translation: el
   },
 }
