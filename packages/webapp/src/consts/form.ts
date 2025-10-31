@@ -512,7 +512,7 @@ export enum INTEGRATION_STATUS_ENUM {
 
 export const FORM_THEMES = [
   {
-    fontFamily: 'Public Sans',
+    fontFamily: 'Roboto Condensed',
     questionTextColor: '#000',
     answerTextColor: '#0445AF',
     buttonBackground: '#0445AF',
@@ -522,7 +522,7 @@ export const FORM_THEMES = [
     backgroundBrightness: 0
   },
   {
-    fontFamily: 'Public Sans',
+    fontFamily: 'Roboto Condensed',
     questionTextColor: '#3D3D3D',
     answerTextColor: '#4FB0AE',
     buttonBackground: '#4FB0AE',
@@ -542,7 +542,7 @@ export const FORM_THEMES = [
     backgroundBrightness: 0
   },
   {
-    fontFamily: 'Public Sans',
+    fontFamily: 'Roboto Condensed',
     questionTextColor: '#262627',
     answerTextColor: '#262627',
     buttonBackground: '#262627',
@@ -552,7 +552,7 @@ export const FORM_THEMES = [
     backgroundBrightness: 0
   },
   {
-    fontFamily: 'Public Sans',
+    fontFamily: 'Roboto Condensed',
     questionTextColor: '#262627',
     answerTextColor: '#262627',
     buttonBackground: '#262627',
@@ -562,7 +562,7 @@ export const FORM_THEMES = [
     backgroundBrightness: 0
   },
   {
-    fontFamily: 'Public Sans',
+    fontFamily: 'Roboto Condensed',
     questionTextColor: '#262627',
     answerTextColor: '#262627',
     buttonBackground: '#262627',
@@ -722,7 +722,7 @@ export const FORM_THEMES = [
     backgroundBrightness: 0
   },
   {
-    fontFamily: 'Public Sans',
+    fontFamily: 'Roboto Condensed',
     questionTextColor: '#000000',
     answerTextColor: '#000000',
     buttonBackground: '#262627',
@@ -732,7 +732,7 @@ export const FORM_THEMES = [
     backgroundBrightness: 0
   },
   {
-    fontFamily: 'Public Sans',
+    fontFamily: 'Roboto Condensed',
     questionTextColor: '#000000',
     answerTextColor: '#000000',
     buttonBackground: '#262627',
@@ -742,7 +742,7 @@ export const FORM_THEMES = [
     backgroundBrightness: 0
   },
   {
-    fontFamily: 'Public Sans',
+    fontFamily: 'Roboto Condensed',
     questionTextColor: '#000000',
     answerTextColor: '#000000',
     buttonBackground: '#262627',
@@ -782,7 +782,7 @@ export const FORM_THEMES = [
     backgroundBrightness: 0
   },
   {
-    fontFamily: 'Public Sans',
+    fontFamily: 'Roboto Condensed',
     questionTextColor: '#262627',
     answerTextColor: '#262627',
     buttonBackground: '#262627',
@@ -792,7 +792,7 @@ export const FORM_THEMES = [
     backgroundBrightness: 0
   },
   {
-    fontFamily: 'Public Sans',
+    fontFamily: 'Roboto Condensed',
     questionTextColor: '#FFFFFF',
     answerTextColor: '#FFFFFF',
     buttonBackground: '#FFFFFF',
@@ -802,7 +802,7 @@ export const FORM_THEMES = [
     backgroundBrightness: 0
   },
   {
-    fontFamily: 'Public Sans',
+    fontFamily: 'Roboto Condensed',
     questionTextColor: '#262627',
     answerTextColor: '#262627',
     buttonBackground: '#262627',

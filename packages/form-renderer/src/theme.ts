@@ -7,7 +7,7 @@ export const SYSTEM_FONTS =
 
 export const GOOGLE_FONTS = [
   'Inter',
-  'Public Sans',
+  'Roboto Condensed',
   'Montserrat',
   'Alegreya',
   'B612',
