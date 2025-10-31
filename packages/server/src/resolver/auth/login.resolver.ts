@@ -4,6 +4,7 @@ import { Args, Query, Resolver } from '@nestjs/graphql'
 import { helper } from '@heyform-inc/utils'
 
 import { GraphqlRequest, GraphqlResponse } from '@decorator'
+import { OAUTH2_ENABLED } from '@environments'
 import { LoginInput } from '@graphql'
 import { BrowserIdGuard } from '@guard'
 import { AuthService, UserService } from '@service'
@@ -25,6 +26,10 @@ export class LoginResolver {
     @GraphqlResponse() res: any,
     @Args('input') input: LoginInput
   ): Promise<boolean> {
+    if (OAUTH2_ENABLED) {
+      throw new BadRequestException('Email/password authentication is disabled. Please use OAuth2.')
+    }
+
     const user = await this.userService.findByEmail(input.email)
 
     if (helper.isEmpty(user)) {

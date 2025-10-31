@@ -16,6 +16,14 @@ export * from './connect-stripe.controller'
 export * from './social-login.controller'
 
 /**
+ * OAuth2 authentication
+ *
+ * /auth/oauth2
+ * /auth/oauth2/callback
+ */
+export * from './oauth2.controller'
+
+/**
  * Payment
  *
  * /payment/intent/webhook

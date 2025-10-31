@@ -2,10 +2,11 @@ import { useTranslation } from 'react-i18next'
 
 import { RedirectUriLink } from '@/components'
 import { Form, Input } from '@/components/ui'
-import { VERIFY_USER_EMAIL } from '@/consts'
+import { OAUTH2_ENABLED, VERIFY_USER_EMAIL } from '@/consts'
 import { AuthService } from '@/service'
 import { useQueryURL, useRouter } from '@/utils'
 
+import { OAuth2Login } from './views/OAuth2Login'
 import { ThirdPartyLogin } from './views/ThirdPartyLogin'
 
 const SignUp = () => {
@@ -28,12 +29,16 @@ const SignUp = () => {
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10">
-          <ThirdPartyLogin
-            headline={t('auth.signup.signWith')}
-            subHeadline={t('auth.signup.continueWith')}
-          />
+          {OAUTH2_ENABLED ? (
+            <OAuth2Login />
+          ) : (
+            <>
+              <ThirdPartyLogin
+                headline={t('auth.signup.signWith')}
+                subHeadline={t('auth.signup.continueWith')}
+              />
 
-          <div className="mt-6">
+              <div className="mt-6">
             <Form.Custom
               submitText={t('auth.signup.button')}
               submitOptions={{
@@ -103,6 +108,8 @@ const SignUp = () => {
               </RedirectUriLink>
             </div>
           </div>
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -20,3 +20,6 @@ export const VERIFY_USER_EMAIL = helper.isTrue(
 export const APP_DISABLE_REGISTRATION = helper.isTrue(
   window.heyform?.appDisableRegistration || import.meta.env.VITE_APP_DISABLE_REGISTRATION
 )
+export const OAUTH2_ENABLED = helper.isTrue(
+  window.heyform?.oauth2Enabled || import.meta.env.VITE_OAUTH2_ENABLED
+)

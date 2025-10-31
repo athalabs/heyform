@@ -4,7 +4,7 @@ import { Args, Query, Resolver } from '@nestjs/graphql'
 import { helper } from '@heyform-inc/utils'
 
 import { GraphqlRequest, GraphqlResponse } from '@decorator'
-import { APP_DISABLE_REGISTRATION, BCRYPT_SALT, VERIFY_USER_EMAIL } from '@environments'
+import { APP_DISABLE_REGISTRATION, BCRYPT_SALT, OAUTH2_ENABLED, VERIFY_USER_EMAIL } from '@environments'
 import { SignUpInput } from '@graphql'
 import { BrowserIdGuard } from '@guard'
 import { AuthService, UserService } from '@service'
@@ -27,6 +27,10 @@ export class SignUpResolver {
     @GraphqlResponse() res: any,
     @Args('input') input: SignUpInput
   ): Promise<boolean> {
+    if (OAUTH2_ENABLED) {
+      throw new BadRequestException('Email/password authentication is disabled. Please use OAuth2.')
+    }
+
     if (APP_DISABLE_REGISTRATION) {
       throw new BadRequestException('Error: Registration is disabled')
     }

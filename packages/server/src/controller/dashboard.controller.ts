@@ -9,6 +9,7 @@ import {
   DISABLE_LOGIN_WITH_GOOGLE,
   GEETEST_CAPTCHA_ID,
   GOOGLE_RECAPTCHA_KEY,
+  OAUTH2_ENABLED,
   STRIPE_PUBLISHABLE_KEY,
   VERIFY_USER_EMAIL
 } from '@environments'
@@ -28,7 +29,8 @@ export class DashboardController {
         appDisableRegistration: APP_DISABLE_REGISTRATION,
         disableLoginWithApple: DISABLE_LOGIN_WITH_APPLE,
         disableLoginWithGoogle: DISABLE_LOGIN_WITH_GOOGLE,
-        verifyUserEmail: VERIFY_USER_EMAIL
+        verifyUserEmail: VERIFY_USER_EMAIL,
+        oauth2Enabled: OAUTH2_ENABLED
       }
     })
   }

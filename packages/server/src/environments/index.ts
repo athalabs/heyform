@@ -142,3 +142,17 @@ export const S3_BUCKET = process.env.S3_BUCKET
 export const S3_ACCESS_KEY_ID = process.env.S3_ACCESS_KEY_ID
 export const S3_SECRET_ACCESS_KEY = process.env.S3_SECRET_ACCESS_KEY
 export const S3_PUBLIC_URL = process.env.S3_PUBLIC_URL
+
+// OAuth2
+export const OAUTH2_ENABLED: boolean = toBool(process.env.OAUTH2_ENABLED, false)
+export const OAUTH2_CLIENT_ID: string = process.env.OAUTH2_CLIENT_ID
+export const OAUTH2_CLIENT_SECRET: string = process.env.OAUTH2_CLIENT_SECRET
+export const OAUTH2_AUTHORIZATION_URL: string = process.env.OAUTH2_AUTHORIZATION_URL
+export const OAUTH2_TOKEN_URL: string = process.env.OAUTH2_TOKEN_URL
+export const OAUTH2_USERINFO_URL: string = process.env.OAUTH2_USERINFO_URL
+export const OAUTH2_SCOPE: string = process.env.OAUTH2_SCOPE || 'openid profile email'
+export const OAUTH2_CALLBACK_URL: string = process.env.OAUTH2_CALLBACK_URL || `${APP_HOMEPAGE_URL}/auth/oauth2/callback`
+export const OAUTH2_USER_ID_FIELD: string = process.env.OAUTH2_USER_ID_FIELD || 'sub'
+export const OAUTH2_USER_EMAIL_FIELD: string = process.env.OAUTH2_USER_EMAIL_FIELD || 'email'
+export const OAUTH2_USER_NAME_FIELD: string = process.env.OAUTH2_USER_NAME_FIELD || 'name'
+export const OAUTH2_USER_AVATAR_FIELD: string = process.env.OAUTH2_USER_AVATAR_FIELD || 'picture'

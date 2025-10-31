@@ -3,6 +3,7 @@ import { Controller, Get, Param, Post, Query, Req, Res } from '@nestjs/common'
 import { SocialLoginTypeEnum } from '@heyform-inc/shared-types-enums'
 import { helper } from '@heyform-inc/utils'
 
+import { OAUTH2_ENABLED } from '@environments'
 import { AuthService, RedisService, SocialLoginService } from '@service'
 import { Logger } from '@utils'
 
@@ -33,6 +34,14 @@ export class SocialLoginController {
     @Query() query: Record<string, string>,
     @Res() res: any
   ) {
+    if (OAUTH2_ENABLED) {
+      return res.render('index', {
+        rendererData: {
+          error: 'SOCIAL_LOGIN_DISABLED'
+        }
+      })
+    }
+
     if (helper.isEmpty(query.state)) {
       return res.render('index', {
         rendererData: {

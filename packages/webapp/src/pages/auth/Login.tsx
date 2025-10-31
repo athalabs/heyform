@@ -5,11 +5,13 @@ import { Form, Input } from '@/components/ui'
 import {
   APP_DISABLE_REGISTRATION,
   DISABLE_LOGIN_WITH_APPLE,
-  DISABLE_LOGIN_WITH_GOOGLE
+  DISABLE_LOGIN_WITH_GOOGLE,
+  OAUTH2_ENABLED
 } from '@/consts'
 import { AuthService } from '@/service'
 import { useQueryURL, useRouter } from '@/utils'
 
+import { OAuth2Login } from './views/OAuth2Login'
 import { ThirdPartyLogin } from './views/ThirdPartyLogin'
 
 const Login = () => {
@@ -44,42 +46,48 @@ const Login = () => {
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10">
-          <ThirdPartyLogin headline={t('login.signWith')} subHeadline={t('login.continueWith')} />
+          {OAUTH2_ENABLED ? (
+            <OAuth2Login />
+          ) : (
+            <>
+              <ThirdPartyLogin headline={t('login.signWith')} subHeadline={t('login.continueWith')} />
 
-          <Form.Custom
-            submitText={t('login.button')}
-            submitOptions={{
-              type: 'primary',
-              block: true
-            }}
-            request={handleFinish}
-          >
-            <Form.Item
-              name="email"
-              label={t('login.Email')}
-              rules={[{ type: 'email', required: true, message: t('login.EmailRequired') }]}
-            >
-              <Input type="email" />
-            </Form.Item>
+              <Form.Custom
+                submitText={t('login.button')}
+                submitOptions={{
+                  type: 'primary',
+                  block: true
+                }}
+                request={handleFinish}
+              >
+                <Form.Item
+                  name="email"
+                  label={t('login.Email')}
+                  rules={[{ type: 'email', required: true, message: t('login.EmailRequired') }]}
+                >
+                  <Input type="email" />
+                </Form.Item>
 
-            <Form.Item
-              name="password"
-              label={
-                <div className="flex items-center justify-between">
-                  <span>{t('login.Password')}</span>
-                  <RedirectUriLink
-                    href="/forgot-password"
-                    className="text-sm font-medium text-blue-700 hover:text-blue-800"
-                  >
-                    {t('login.forgotPassword')}
-                  </RedirectUriLink>
-                </div>
-              }
-              rules={[{ required: true, message: t('login.PasswordRequired') }]}
-            >
-              <Input.Password />
-            </Form.Item>
-          </Form.Custom>
+                <Form.Item
+                  name="password"
+                  label={
+                    <div className="flex items-center justify-between">
+                      <span>{t('login.Password')}</span>
+                      <RedirectUriLink
+                        href="/forgot-password"
+                        className="text-sm font-medium text-blue-700 hover:text-blue-800"
+                      >
+                        {t('login.forgotPassword')}
+                      </RedirectUriLink>
+                    </div>
+                  }
+                  rules={[{ required: true, message: t('login.PasswordRequired') }]}
+                >
+                  <Input.Password />
+                </Form.Item>
+              </Form.Custom>
+            </>
+          )}
         </div>
       </div>
     </div>
