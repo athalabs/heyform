@@ -13,29 +13,32 @@ export const Branding: FC = () => {
     return null
   }
 
-  return (
-    <a className="heyform-branding" href="https://heyform.net/?ref=badge" target="_blank">
-      <Trans
-        t={t}
-        i18nKey="Made with HeyForm"
-        components={{
-          icon: <LogoIcon className="inline h-4 w-4" />,
-          span: <span className="font-bold" />
-        }}
-      />
-    </a>
-  )
+  return <></>
+
+  // return (
+  //   <a className="heyform-branding" href="https://heyform.net/?ref=badge" target="_blank">
+  //     <Trans
+  //       t={t}
+  //       i18nKey="Made with HeyForm"
+  //       components={{
+  //         icon: <LogoIcon className="inline h-4 w-4" />,
+  //         span: <span className="font-bold" />
+  //       }}
+  //     />
+  //   </a>
+  // )
 }
 
 export const WelcomeBranding: FC = () => {
-  return (
-    <div className="heyform-footer heyform-welcome-footer">
-      <div className="heyform-footer-wrapper">
-        <div className="heyform-footer-left" />
-        <div className="heyform-footer-right">
-          <Branding />
-        </div>
-      </div>
-    </div>
-  )
+  return <></>
+  // return (
+  //   <div className="heyform-footer heyform-welcome-footer">
+  //     <div className="heyform-footer-wrapper">
+  //       <div className="heyform-footer-left" />
+  //       <div className="heyform-footer-right">
+  //         <Branding />
+  //       </div>
+  //     </div>
+  //   </div>
+  // )
 }
