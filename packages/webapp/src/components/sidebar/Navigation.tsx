@@ -107,7 +107,7 @@ export const Navigation: FC<NavigationProps> = observer(
         </div>
 
         {/* Resources links */}
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <h3
             className="mb-2 px-2 text-xs font-semibold uppercase tracking-wider text-slate-900"
             id="resources-headline"
@@ -140,7 +140,7 @@ export const Navigation: FC<NavigationProps> = observer(
               <span className="truncate">{t('other.labelList.Changelog')}</span>
             </a>
           </div>
-        </div>
+        </div> */}
       </nav>
     )
   }
